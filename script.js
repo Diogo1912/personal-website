@@ -151,15 +151,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 });
 
-// Parallax effect for floating cards
+// Simple parallax for clouds
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.floating-card');
     
-    parallaxElements.forEach((element, index) => {
-        const speed = 0.5 + (index * 0.1);
-        const yPos = -(scrolled * speed);
-        element.style.transform = `translateY(${yPos}px)`;
+    // Move clouds slightly with scroll
+    const clouds = document.querySelectorAll('.cloud');
+    clouds.forEach((cloud, index) => {
+        const speed = 0.1 + (index * 0.05);
+        const yPos = scrolled * speed;
+        cloud.style.transform += ` translateY(${yPos}px)`;
     });
 });
 

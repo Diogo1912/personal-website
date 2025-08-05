@@ -9,12 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Background Elements -->
-    <div class="bg-orbs">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-    </div>
+    <!-- Floating Clouds -->
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
 
     <!-- Navigation -->
     <nav class="nav">
@@ -51,18 +48,16 @@
                         <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                     </div>
                 </div>
-                <div class="hero-cards">
-                    <div class="floating-card card-1">
-                        <i class="fas fa-robot"></i>
-                        <span>AI Automation</span>
+                <div class="solar-system">
+                    <div class="sun"></div>
+                    <div class="orbit orbit-1">
+                        <div class="planet planet-1"></div>
                     </div>
-                    <div class="floating-card card-2">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Data Science</span>
+                    <div class="orbit orbit-2">
+                        <div class="planet planet-2"></div>
                     </div>
-                    <div class="floating-card card-3">
-                        <i class="fas fa-code"></i>
-                        <span>Full Stack Dev</span>
+                    <div class="orbit orbit-3">
+                        <div class="planet planet-3"></div>
                     </div>
                 </div>
             </div>
@@ -195,8 +190,8 @@
                         <img src="images/geldmaat.png" alt="Geldmaat ATM Accessibility Simulator" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3>ATM Accessibility Revolution</h3>
-                        <p>Transforming banking accessibility through innovative web technology. Built for Geldmaat (Netherlands' leading ATM network), this Flask application creates an inclusive digital experience with text-to-speech, multi-language support, and adaptive interfaces that empower visually impaired users.</p>
+                        <h3>Geldmaat ATM Accessibility Tool</h3>
+                        <p>A web application that helps visually impaired users learn how to use ATMs. Features include text-to-speech, adjustable font sizes, and multiple language support to make banking more accessible.</p>
                         <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; padding: 5px;">
                             <span style="display: inline-block; background-color: #3776ab; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Python</span>
                             <span style="display: inline-block; background-color: #000000; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Flask</span>
@@ -217,8 +212,8 @@
                         <img src="images/carbon.png" alt="Carbon Countdown" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3>Climate Crisis Data Platform</h3>
-                        <p>Urgent climate action through compelling data storytelling. This interactive platform combines real-time countdown timers with powerful Plotly visualizations to transform complex carbon emission data into actionable insights, driving environmental awareness and policy change.</p>
+                        <h3>Carbon Countdown Timer</h3>
+                        <p>A web application that displays a countdown to 2030 climate targets and visualizes carbon emission data using interactive charts. Helps users understand climate change progress and trends.</p>
                         <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; padding: 5px;">
                             <span style="display: inline-block; background-color: #3776ab; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Python</span>
                             <span style="display: inline-block; background-color: #000000; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Flask</span>
@@ -239,8 +234,8 @@
                         <img src="images/whoppah.png" alt="Whoppah AI Generator" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3>AI-Powered Content Engine</h3>
-                        <p>Next-generation content automation for e-commerce. Leveraging advanced AI APIs, this intelligent system generates high-quality product descriptions, marketing copy, and user-engaging content at scale, revolutionizing how Whoppah connects buyers with unique vintage finds.</p>
+                        <h3>Whoppah AI Content Generator</h3>
+                        <p>An AI tool that automatically generates product descriptions and marketing content for the Whoppah marketplace. Uses machine learning to create engaging copy for vintage items.</p>
                         <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; padding: 5px;">
                             <span style="display: inline-block; background-color: #3776ab; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Python</span>
                             <span style="display: inline-block; background-color: #000000; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Flask</span>
@@ -261,8 +256,8 @@
                         <img src="images/island.png" alt="ISLANDtm Economic Simulation" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3>Predictive Economic Modeling</h3>
-                        <p>Advanced computational social science meets economic forecasting. This sophisticated simulation engine models complex socioeconomic interactions, predicting GDP fluctuations while accounting for climate events, policy changes, and demographic shifts—delivering insights for sustainable development planning.</p>
+                        <h3>Island Economic Simulation</h3>
+                        <p>A computational model that simulates the economy of a fictional island over multiple years. Tracks GDP changes based on policy decisions, natural events, and population dynamics.</p>
                         <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; padding: 5px;">
                             <span style="display: inline-block; background-color: #3776ab; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Python</span>
                             <span style="display: inline-block; background-color: #f37626; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Jupyter</span>
@@ -283,8 +278,8 @@
                         <img src="images/ai-qa.png" alt="QA Agent" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3>Intelligent Testing Automation</h3>
-                        <p>Revolutionary AI-driven quality assurance that transforms software testing. This intelligent agent seamlessly integrates with JIRA workflows, automatically detecting bugs, running comprehensive test suites, and ensuring bulletproof software delivery through advanced automation.</p>
+                        <h3>Automated QA Testing Agent</h3>
+                        <p>A Python tool that automatically runs software tests and integrates with JIRA for bug tracking. Streamlines the quality assurance process by automating repetitive testing tasks.</p>
                         <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; padding: 5px;">
                             <span style="display: inline-block; background-color: #3776ab; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Python</span>
                             <span style="display: inline-block; background-color: #0052cc; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">JIRA API</span>
@@ -305,8 +300,8 @@
                         <img src="images/reddit-api.png" alt="Reddit to Slack Integration" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
-                        <h3>Social Intelligence Bridge</h3>
-                        <p>Smart content curation that keeps teams ahead of trends. This automation engine intelligently filters Reddit discussions, identifying valuable insights and trending topics, then delivers curated content directly to Slack channels—transforming social media noise into strategic intelligence.</p>
+                        <h3>Reddit to Slack Bot</h3>
+                        <p>A simple automation tool that monitors Reddit for relevant posts and forwards them to designated Slack channels. Helps teams stay updated on discussions without manually checking Reddit.</p>
                         <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; padding: 5px;">
                             <span style="display: inline-block; background-color: #3776ab; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Python</span>
                             <span style="display: inline-block; background-color: #ff4500; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Reddit API</span>
