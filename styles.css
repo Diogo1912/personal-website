@@ -261,7 +261,7 @@ body {
 
 /* Glass Effect Utility */
 .glass-card {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
@@ -271,7 +271,7 @@ body {
 }
 
 .glass-card:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
@@ -535,7 +535,7 @@ body {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 4rem;
-    color: #1e40af;
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -548,7 +548,7 @@ body {
 
 .about-text p {
     margin-bottom: 1.5rem;
-    color: #1e40af;
+    color: #ffffff;
     line-height: 1.8;
 }
 
@@ -560,7 +560,7 @@ body {
 }
 
 .accordion-item {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
@@ -570,7 +570,7 @@ body {
 }
 
 .accordion-item:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
@@ -594,7 +594,7 @@ body {
     align-items: center;
     gap: 1rem;
     font-size: 1.1rem;
-    color: #1e40af;
+    color: #ffffff;
     font-weight: 600;
 }
 
@@ -612,7 +612,7 @@ body {
 
 .accordion-content p {
     padding-bottom: 1.5rem;
-    color: #374151;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -628,8 +628,8 @@ body {
 .skills-marquee {
     padding: 4rem 0;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
 }
 
 .marquee {
@@ -706,7 +706,7 @@ body {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
@@ -719,7 +719,7 @@ body {
 
 .project-card:hover {
     transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
@@ -750,11 +750,11 @@ body {
 .project-content h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #1e40af;
+    color: #ffffff;
 }
 
 .project-content p {
-    color: #374151;
+    color: #ffffff;
     margin-bottom: 1.5rem;
     line-height: 1.6;
     flex-grow: 1;
@@ -956,11 +956,11 @@ body {
 .contact-text h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #1e40af;
+    color: #ffffff;
 }
 
 .contact-text p {
-    color: #374151;
+    color: #ffffff;
     line-height: 1.8;
     margin-bottom: 2rem;
 }
@@ -976,22 +976,26 @@ body {
 }
 
 .contact-link {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
     padding: 1.5rem;
     text-decoration: none;
-    color: #1e40af;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .contact-link:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 .contact-link i {
@@ -1001,8 +1005,7 @@ body {
 
 /* Email - Orange/Red */
 .contact-link:nth-child(1) {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), linear-gradient(135deg, rgba(255, 87, 34, 0.15), rgba(255, 152, 0, 0.15));
-    border: 2px solid rgba(255, 87, 34, 0.3);
+    border: 2px solid rgba(255, 87, 34, 0.4);
 }
 
 .contact-link:nth-child(1) i {
@@ -1011,15 +1014,12 @@ body {
 }
 
 .contact-link:nth-child(1):hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), linear-gradient(135deg, rgba(255, 87, 34, 0.2), rgba(255, 152, 0, 0.2));
-    border: 2px solid rgba(255, 87, 34, 0.5);
-    transform: translateY(-8px);
+    border: 2px solid rgba(255, 87, 34, 0.6);
 }
 
 /* LinkedIn - Blue */
 .contact-link:nth-child(2) {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), linear-gradient(135deg, rgba(10, 102, 194, 0.15), rgba(72, 117, 180, 0.15));
-    border: 2px solid rgba(10, 102, 194, 0.3);
+    border: 2px solid rgba(10, 102, 194, 0.4);
 }
 
 .contact-link:nth-child(2) i {
@@ -1028,15 +1028,12 @@ body {
 }
 
 .contact-link:nth-child(2):hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), linear-gradient(135deg, rgba(10, 102, 194, 0.2), rgba(72, 117, 180, 0.2));
-    border: 2px solid rgba(10, 102, 194, 0.5);
-    transform: translateY(-8px);
+    border: 2px solid rgba(10, 102, 194, 0.6);
 }
 
 /* GitHub - Dark Gray */
 .contact-link:nth-child(3) {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), linear-gradient(135deg, rgba(36, 41, 47, 0.15), rgba(88, 96, 105, 0.15));
-    border: 2px solid rgba(36, 41, 47, 0.3);
+    border: 2px solid rgba(36, 41, 47, 0.4);
 }
 
 .contact-link:nth-child(3) i {
@@ -1045,15 +1042,12 @@ body {
 }
 
 .contact-link:nth-child(3):hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), linear-gradient(135deg, rgba(36, 41, 47, 0.2), rgba(88, 96, 105, 0.2));
-    border: 2px solid rgba(36, 41, 47, 0.5);
-    transform: translateY(-8px);
+    border: 2px solid rgba(36, 41, 47, 0.6);
 }
 
 /* Instagram - Pink/Purple Gradient */
 .contact-link:nth-child(4) {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), linear-gradient(135deg, rgba(225, 48, 108, 0.15), rgba(193, 53, 132, 0.15), rgba(131, 58, 180, 0.15));
-    border: 2px solid rgba(225, 48, 108, 0.3);
+    border: 2px solid rgba(225, 48, 108, 0.4);
 }
 
 .contact-link:nth-child(4) i {
@@ -1065,21 +1059,19 @@ body {
 }
 
 .contact-link:nth-child(4):hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), linear-gradient(135deg, rgba(225, 48, 108, 0.2), rgba(193, 53, 132, 0.2), rgba(131, 58, 180, 0.2));
-    border: 2px solid rgba(225, 48, 108, 0.5);
-    transform: translateY(-8px);
+    border: 2px solid rgba(225, 48, 108, 0.6);
 }
 
 .contact-link span {
     font-weight: 600;
-    color: #1e40af;
+    color: #ffffff;
 }
 
-/* Grass Footer */
+/* Footer with Triangular Transition */
 .footer {
-    padding: 3rem 0 1rem 0;
+    padding: 4rem 0 1rem 0;
     text-align: center;
-    background: #228B22;
+    background: #87CEEB;
     position: relative;
     overflow: hidden;
 }
@@ -1090,31 +1082,38 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 30px;
+    height: 100%;
     background: #228B22;
     clip-path: polygon(
-        0% 0%, 
-        5% 100%, 10% 0%, 
-        15% 100%, 20% 0%, 
-        25% 100%, 30% 0%, 
-        35% 100%, 40% 0%, 
-        45% 100%, 50% 0%, 
-        55% 100%, 60% 0%, 
-        65% 100%, 70% 0%, 
-        75% 100%, 80% 0%, 
-        85% 100%, 90% 0%, 
-        95% 100%, 100% 0%
+        0% 40%, 
+        2% 0%, 4% 40%, 
+        6% 0%, 8% 40%, 
+        10% 0%, 12% 40%, 
+        14% 0%, 16% 40%, 
+        18% 0%, 20% 40%, 
+        22% 0%, 24% 40%, 
+        26% 0%, 28% 40%, 
+        30% 0%, 32% 40%, 
+        34% 0%, 36% 40%, 
+        38% 0%, 40% 40%, 
+        42% 0%, 44% 40%, 
+        46% 0%, 48% 40%, 
+        50% 0%, 52% 40%, 
+        54% 0%, 56% 40%, 
+        58% 0%, 60% 40%, 
+        62% 0%, 64% 40%, 
+        66% 0%, 68% 40%, 
+        70% 0%, 72% 40%, 
+        74% 0%, 76% 40%, 
+        78% 0%, 80% 40%, 
+        82% 0%, 84% 40%, 
+        86% 0%, 88% 40%, 
+        90% 0%, 92% 40%, 
+        94% 0%, 96% 40%, 
+        98% 0%, 100% 40%, 
+        100% 100%, 
+        0% 100%
     );
-}
-
-.footer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: transparent;
 }
 
 .footer p {
@@ -1126,6 +1125,18 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Move solar system above text on mobile */
+    .solar-system {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto 2rem auto;
+        order: -1;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -1148,7 +1159,8 @@ body {
     }
 
     .hero-content {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         gap: 2rem;
     }

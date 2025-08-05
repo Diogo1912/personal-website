@@ -166,7 +166,7 @@ style.textContent = `
     }
     
     .nav-link.active {
-        color: #26d0ce;
+        color: #ffffff;
     }
     
     .nav-link.active::after {
