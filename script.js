@@ -106,50 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// CV Download functionality
-document.getElementById('download-cv').addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    // Create a temporary message
-    const originalText = this.innerHTML;
-    this.innerHTML = '<i class="fas fa-info-circle"></i> Please add your CV file';
-    this.style.background = 'rgba(255, 193, 7, 0.8)';
-    
-    // Reset after 3 seconds
-    setTimeout(() => {
-        this.innerHTML = originalText;
-        this.style.background = '';
-    }, 3000);
-    
-    // In a real implementation, you would link to your actual CV file:
-    // window.open('path/to/your/cv.pdf', '_blank');
-});
+// CV Download functionality (removed - no longer needed)
 
-// Typing effect for hero title
-function typeWriter(element, text, speed = 50) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    type();
-}
+// Old typing function removed to avoid conflicts
 
-// Initialize typing effect on page load
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        const heroTitle = document.querySelector('.hero-title');
-        if (heroTitle) {
-            const originalText = heroTitle.textContent;
-            typeWriter(heroTitle, originalText, 30);
-        }
-    }, 1000);
-});
 
 // Simple parallax for clouds
 window.addEventListener('scroll', () => {
@@ -216,6 +176,75 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Tech chip colors are now applied directly in HTML classes - no JavaScript needed
+
+// Clean typing animation
+let typingInProgress = false;
+
+function startTypingAnimation() {
+    if (typingInProgress) return; // Prevent multiple instances
+    
+    const typedTextElement = document.getElementById('typed-text');
+    if (!typedTextElement) return;
+    
+    typingInProgress = true;
+    
+    const titles = [
+        'AI Engineer',
+        'Change Maker', 
+        'Full Stack Developer',
+        'AI Automation Engineer & Student in Computational Social Sciences'
+    ];
+    
+    let titleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeStep() {
+        const currentTitle = titles[titleIndex];
+        
+        if (!isDeleting) {
+            // Typing forward
+            typedTextElement.textContent = currentTitle.substring(0, charIndex + 1);
+            charIndex++;
+            
+            if (charIndex === currentTitle.length) {
+                // Finished typing current title
+                if (titleIndex === titles.length - 1) {
+                    // Last title - stop here
+                    return;
+                }
+                // Pause before deleting
+                setTimeout(() => {
+                    isDeleting = true;
+                    typeStep();
+                }, 2500);
+                return;
+            }
+            setTimeout(typeStep, 120);
+        } else {
+            // Deleting backward
+            charIndex--;
+            typedTextElement.textContent = currentTitle.substring(0, charIndex);
+            
+            if (charIndex === 0) {
+                // Finished deleting
+                isDeleting = false;
+                titleIndex++;
+                setTimeout(typeStep, 300);
+                return;
+            }
+            setTimeout(typeStep, 60);
+        }
+    }
+    
+    // Start typing
+    typeStep();
+}
+
+// Start animation when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(startTypingAnimation, 1500);
+});
 
 // Console welcome message
 console.log(`

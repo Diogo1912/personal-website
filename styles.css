@@ -261,9 +261,9 @@ body {
 
 /* Glass Effect Utility */
 .glass-card {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -271,8 +271,8 @@ body {
 }
 
 .glass-card:hover {
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
@@ -390,7 +390,8 @@ body {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #1e40af;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title {
@@ -398,13 +399,25 @@ body {
     color: #3b82f6;
     margin-bottom: 1rem;
     font-weight: 600;
+    min-height: 2rem;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+    font-weight: 400;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 .hero-description {
     font-size: 1.1rem;
-    color: #64748b;
+    color: #e2e8f0;
     margin-bottom: 2rem;
     line-height: 1.8;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .hero-buttons {
@@ -547,9 +560,9 @@ body {
 }
 
 .accordion-item {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -557,8 +570,8 @@ body {
 }
 
 .accordion-item:hover {
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
@@ -615,6 +628,8 @@ body {
 .skills-marquee {
     padding: 4rem 0;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
 }
 
 .marquee {
@@ -691,9 +706,9 @@ body {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     overflow: visible;
     transition: all 0.3s ease;
@@ -704,8 +719,8 @@ body {
 
 .project-card:hover {
     transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
@@ -961,9 +976,9 @@ body {
 }
 
 .contact-link {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 1.5rem;
     text-decoration: none;
