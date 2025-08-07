@@ -30,20 +30,21 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // Navbar background stays consistent - no scroll changes needed
 
 // Skills accordion functionality
-document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const item = header.parentElement;
-        const content = item.querySelector('.accordion-content');
-        
-        // Close all other accordion items
-        document.querySelectorAll('.accordion-item').forEach(otherItem => {
-            if (otherItem !== item) {
-                otherItem.classList.remove('active');
-            }
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            
+            // Close all other accordion items
+            document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
         });
-        
-        // Toggle current item
-        item.classList.toggle('active');
     });
 });
 
@@ -244,6 +245,32 @@ function startTypingAnimation() {
 // Start animation when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(startTypingAnimation, 1500);
+});
+
+
+// Dark mode toggle functionality
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+const themeIcon = themeToggle.querySelector('i');
+
+// Check for saved theme preference or default to 'light'
+const currentTheme = localStorage.getItem('theme') || 'light';
+if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+    themeIcon.classList.replace('fa-moon', 'fa-sun');
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    // Update icon
+    if (body.classList.contains('dark-mode')) {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
+    }
 });
 
 // Console welcome message
