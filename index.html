@@ -501,8 +501,29 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Diogo Baptista. All rights reserved.</p>
+            
+            <!-- Easter Egg Hint -->
+            <div class="easter-egg-hint" id="easter-egg-hint">
+                ?
+            </div>
         </div>
     </footer>
+
+    <!-- Easter Egg Modal -->
+    <div id="easter-egg-modal" class="easter-egg-modal">
+        <div class="easter-egg-modal-content">
+            <span class="easter-egg-modal-close" id="modal-close">&times;</span>
+            <h3>🕵️ Secret Hint</h3>
+            <p>There is a hidden secret in this website. If you input an iconic code something will happen in the hero section. ;)</p>
+            <div class="modal-hint">
+                <small><em>Hint: Think gaming history... </em></small>
+                <div class="spoiler" id="spoiler-hint">
+                    <span class="spoiler-content">↑↑↓↓←→←→BA</span>
+                    <span class="spoiler-overlay">Click to reveal</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Floating Theme Toggle -->
     <button id="theme-toggle" class="theme-toggle-floating" aria-label="Toggle dark mode">

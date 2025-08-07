@@ -1780,6 +1780,241 @@ body.dark-mode .footer::before {
     z-index: 1;
 }
 
+/* Easter Egg Hint */
+.easter-egg-hint {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    font-family: 'Inter', sans-serif;
+}
+
+.easter-egg-hint:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .easter-egg-hint {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .easter-egg-hint:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Easter Egg Modal */
+.easter-egg-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.easter-egg-modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    margin: 15% auto;
+    padding: 2rem;
+    border: 2px solid #3b82f6;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+    text-align: center;
+}
+
+body.dark-mode .easter-egg-modal-content {
+    background: rgba(15, 15, 35, 0.95);
+    border-color: #fbbf24;
+}
+
+.easter-egg-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #666666;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.easter-egg-modal-close:hover {
+    color: #000000;
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+body.dark-mode .easter-egg-modal-close {
+    color: #cccccc;
+}
+
+body.dark-mode .easter-egg-modal-close:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.easter-egg-modal-content h3 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+body.dark-mode .easter-egg-modal-content h3 {
+    color: #fbbf24;
+}
+
+.easter-egg-modal-content p {
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+body.dark-mode .easter-egg-modal-content p {
+    color: #e5e7eb;
+}
+
+.modal-hint {
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 4px solid #3b82f6;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+body.dark-mode .modal-hint {
+    background: rgba(251, 191, 36, 0.1);
+    border-left-color: #fbbf24;
+}
+
+.modal-hint small {
+    color: #6b7280;
+}
+
+body.dark-mode .modal-hint small {
+    color: #9ca3af;
+}
+
+/* Spoiler effect */
+.spoiler {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.spoiler:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .spoiler {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .spoiler:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.spoiler-content {
+    color: #6b7280;
+    font-weight: bold;
+    filter: blur(5px);
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+body.dark-mode .spoiler-content {
+    color: #9ca3af;
+}
+
+.spoiler-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+    color: #6b7280;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+body.dark-mode .spoiler-overlay {
+    color: #9ca3af;
+    background: rgba(15, 15, 35, 0.9);
+}
+
+.spoiler.revealed .spoiler-content {
+    filter: blur(0px);
+    user-select: text;
+    color: #3b82f6;
+}
+
+body.dark-mode .spoiler.revealed .spoiler-content {
+    color: #fbbf24;
+}
+
+.spoiler.revealed .spoiler-overlay {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Move solar system above text on mobile */
@@ -1911,4 +2146,105 @@ body.dark-mode .footer::before {
     .glass-card {
         padding: 1.5rem;
     }
+}
+
+/* Easter Egg Animations */
+@keyframes easterEggPop {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(180deg);
+        opacity: 0;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(1.1) rotate(-10deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes easterEggFadeOut {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes rainbowGlow {
+    0% { filter: hue-rotate(0deg) brightness(1) saturate(1); }
+    25% { filter: hue-rotate(90deg) brightness(1.2) saturate(1.5); }
+    50% { filter: hue-rotate(180deg) brightness(1.4) saturate(2); }
+    75% { filter: hue-rotate(270deg) brightness(1.2) saturate(1.5); }
+    100% { filter: hue-rotate(360deg) brightness(1) saturate(1); }
+}
+
+@keyframes starDance {
+    0% { 
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1) hue-rotate(0deg);
+    }
+    50% { 
+        transform: scale(1.5) rotate(180deg);
+        filter: brightness(2) hue-rotate(180deg);
+    }
+    100% { 
+        transform: scale(1) rotate(360deg);
+        filter: brightness(1) hue-rotate(360deg);
+    }
+}
+
+@keyframes megaPulse {
+    0% { 
+        transform: translate(-50%, -50%) scale(1);
+        filter: brightness(1) hue-rotate(0deg);
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.3);
+        filter: brightness(1.5) hue-rotate(180deg);
+    }
+    100% { 
+        transform: translate(-50%, -50%) scale(1);
+        filter: brightness(1) hue-rotate(360deg);
+    }
+}
+
+/* Easter Egg Classes */
+.cloud-1.rainbow-glow {
+    animation: cloudDrift1 25s linear infinite, rainbowGlow 2s ease-in-out infinite alternate !important;
+}
+
+.cloud-2.rainbow-glow {
+    animation: cloudDrift2 30s linear infinite, rainbowGlow 2s ease-in-out infinite alternate !important;
+}
+
+.cloud-3.rainbow-glow {
+    animation: cloudDrift3 20s linear infinite, rainbowGlow 2s ease-in-out infinite alternate !important;
+}
+
+.cloud-4.rainbow-glow {
+    animation: cloudDrift4 35s linear infinite, rainbowGlow 2s ease-in-out infinite alternate !important;
+}
+
+.cloud-5.rainbow-glow {
+    animation: cloudDrift5 18s linear infinite, rainbowGlow 2s ease-in-out infinite alternate !important;
+}
+
+.cloud-6.rainbow-glow {
+    animation: cloudDrift6 28s linear infinite, rainbowGlow 2s ease-in-out infinite alternate !important;
+}
+
+.star.star-dance {
+    animation: twinkle 3s ease-in-out infinite alternate, starDance 1s ease-in-out infinite alternate !important;
+}
+
+.sun.mega-pulse {
+    animation: sunPulse 4s ease-in-out infinite alternate, megaPulse 0.8s ease-in-out infinite alternate !important;
+}
+
+.moon.mega-pulse {
+    animation: moonGlow 6s ease-in-out infinite alternate, megaPulse 0.8s ease-in-out infinite alternate !important;
 }

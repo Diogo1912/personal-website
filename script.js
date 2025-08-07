@@ -301,6 +301,192 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
+// EASTER EGG: Konami Code Implementation
+let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
+let konamiPosition = 0;
+let easterEggActive = false;
+
+document.addEventListener('keydown', function(e) {
+    if (easterEggActive) return;
+    
+    if (e.keyCode === konamiCode[konamiPosition]) {
+        konamiPosition++;
+        if (konamiPosition === konamiCode.length) {
+            activateEasterEgg();
+            konamiPosition = 0;
+        }
+    } else {
+        konamiPosition = 0;
+    }
+});
+
+function activateEasterEgg() {
+    if (easterEggActive) return;
+    easterEggActive = true;
+    
+    // Create celebration message
+    const message = document.createElement('div');
+    message.innerHTML = `
+        <div style="text-align: center;">
+            <h2 style="margin: 0 0 1rem 0; font-size: 2rem; color: #fbbf24;">🎉 Easter Egg Found! 🎉</h2>
+            <p style="margin: 0; font-size: 1.2rem; color: #ffffff;">You discovered the secret Konami Code!</p>
+            <p style="margin: 0.5rem 0 0 0; font-size: 1rem; color: #e2e8f0;">Enjoy the special animation!</p>
+        </div>
+    `;
+    message.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(59, 130, 246, 0.9);
+        backdrop-filter: blur(20px);
+        border: 2px solid #fbbf24;
+        border-radius: 20px;
+        padding: 2rem 3rem;
+        z-index: 10000;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: easterEggPop 0.5s ease-out;
+    `;
+    
+    document.body.appendChild(message);
+    
+    // Remove message after 3 seconds
+    setTimeout(() => {
+        message.style.animation = 'easterEggFadeOut 0.5s ease-out forwards';
+        setTimeout(() => message.remove(), 500);
+    }, 3000);
+    
+    // Trigger special effects
+    triggerSpecialEffects();
+    
+    // Reset after 10 seconds
+    setTimeout(() => {
+        easterEggActive = false;
+        resetSpecialEffects();
+    }, 10000);
+}
+
+function triggerSpecialEffects() {
+    // Rainbow clouds effect
+    const clouds = document.querySelectorAll('.cloud');
+    console.log('Found clouds:', clouds.length);
+    clouds.forEach((cloud, index) => {
+        cloud.classList.add('rainbow-glow');
+        cloud.style.animationDelay = `${index * 0.2}s`;
+    });
+    
+    // Super speed solar system
+    const orbits = document.querySelectorAll('.orbit');
+    console.log('Found orbits:', orbits.length);
+    orbits.forEach(orbit => {
+        orbit.style.animationDuration = '2s';
+    });
+    
+    // Dancing stars
+    const stars = document.querySelectorAll('.star');
+    console.log('Found stars:', stars.length);
+    stars.forEach((star, index) => {
+        star.classList.add('star-dance');
+        star.style.animationDelay = `${index * 0.1}s`;
+    });
+    
+    // Pulsing sun/moon
+    const sun = document.querySelector('.sun');
+    const moon = document.querySelector('.moon');
+    console.log('Found sun:', !!sun, 'Found moon:', !!moon);
+    if (sun) {
+        sun.classList.add('mega-pulse');
+    }
+    if (moon) {
+        moon.classList.add('mega-pulse');
+    }
+    
+    // Show secret message in console
+    console.log(`
+🎉 EASTER EGG ACTIVATED! 🎉
+╔══════════════════════════════════════╗
+║  You found the secret Konami Code!   ║
+║         ↑↑↓↓←→←→BA                    ║
+║                                      ║
+║  Thanks for exploring my portfolio!  ║
+║  - Diogo Baptista                    ║
+╚══════════════════════════════════════╝
+    `);
+}
+
+function resetSpecialEffects() {
+    // Reset clouds
+    const clouds = document.querySelectorAll('.cloud');
+    clouds.forEach((cloud, index) => {
+        cloud.classList.remove('rainbow-glow');
+        cloud.style.animationDelay = '';
+    });
+    
+    // Reset solar system
+    const orbits = document.querySelectorAll('.orbit');
+    orbits.forEach((orbit, index) => {
+        if (index === 0) orbit.style.animationDuration = '12s';
+        if (index === 1) orbit.style.animationDuration = '18s';
+        if (index === 2) orbit.style.animationDuration = '24s';
+    });
+    
+    // Reset stars
+    const stars = document.querySelectorAll('.star');
+    stars.forEach(star => {
+        star.classList.remove('star-dance');
+        star.style.animationDelay = '';
+    });
+    
+    // Reset sun/moon
+    const sun = document.querySelector('.sun');
+    const moon = document.querySelector('.moon');
+    if (sun) sun.classList.remove('mega-pulse');
+    if (moon) moon.classList.remove('mega-pulse');
+}
+
+// Easter Egg Modal functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const hintButton = document.getElementById('easter-egg-hint');
+    const modal = document.getElementById('easter-egg-modal');
+    const closeButton = document.getElementById('modal-close');
+
+    // Open modal when clicking the hint
+    hintButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+
+    // Close modal when clicking the X
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+
+    // Close modal when clicking outside the content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Spoiler functionality
+    const spoilerHint = document.getElementById('spoiler-hint');
+    spoilerHint.addEventListener('click', () => {
+        spoilerHint.classList.add('revealed');
+        // Prevent double-clicking from removing the revealed state
+        spoilerHint.style.pointerEvents = 'none';
+    });
+});
+
 // Add CSS for loading state
 const loadingStyle = document.createElement('style');
 loadingStyle.textContent = `
