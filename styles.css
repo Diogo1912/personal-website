@@ -180,18 +180,24 @@ body.dark-mode .moon {
     width: 200px;
     height: 200px;
     animation: rotate 12s linear infinite;
+    z-index: 5;
+    pointer-events: none;
 }
 
 .orbit-2 {
     width: 300px;
     height: 300px;
     animation: rotate 18s linear infinite reverse;
+    z-index: 4;
+    pointer-events: none;
 }
 
 .orbit-3 {
     width: 400px;
     height: 400px;
     animation: rotate 24s linear infinite;
+    z-index: 3;
+    pointer-events: none;
 }
 
 .skill-card {
@@ -212,13 +218,15 @@ body.dark-mode .moon {
     backdrop-filter: blur(10px);
     text-align: center;
     min-width: 140px;
+    pointer-events: auto;
+    z-index: 10;
 }
 
 .skill-card:hover {
-    background: rgba(255, 255, 255, 1);
-    transform: translateX(-50%) scale(1.15);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    border-color: rgba(59, 130, 246, 0.5);
+    background: rgba(255, 255, 255, 1) !important;
+    transform: translateX(-50%) scale(1.15) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2) !important;
+    z-index: 15 !important;
 }
 
 .skill-card-1 {
@@ -228,9 +236,8 @@ body.dark-mode .moon {
 }
 
 .skill-card-1:hover {
-    background: rgba(255, 255, 255, 1);
-    color: #1e3a8a;
-    border-color: #3b82f6;
+    color: #1e3a8a !important;
+    border-color: #3b82f6 !important;
 }
 
 .skill-card-2 {
@@ -240,9 +247,8 @@ body.dark-mode .moon {
 }
 
 .skill-card-2:hover {
-    background: rgba(255, 255, 255, 1);
-    color: #064e3b;
-    border-color: #10b981;
+    color: #064e3b !important;
+    border-color: #10b981 !important;
 }
 
 .skill-card-3 {
@@ -252,9 +258,8 @@ body.dark-mode .moon {
 }
 
 .skill-card-3:hover {
-    background: rgba(255, 255, 255, 1);
-    color: #78350f;
-    border-color: #f59e0b;
+    color: #78350f !important;
+    border-color: #f59e0b !important;
 }
 
 @keyframes rotate {
