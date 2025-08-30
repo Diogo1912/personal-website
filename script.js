@@ -509,3 +509,41 @@ loadingStyle.textContent = `
     }
 `;
 document.head.appendChild(loadingStyle);
+
+// Portfolio category filtering functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryChips = document.querySelectorAll('.category-chip');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    // Add click event listeners to category chips
+    categoryChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            const category = chip.getAttribute('data-category');
+            
+            // Update active chip
+            categoryChips.forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            
+            // Filter projects
+            filterProjects(category);
+        });
+    });
+    
+    // Filter projects based on selected category
+    function filterProjects(selectedCategory) {
+        projectCards.forEach(card => {
+            const cardCategories = card.getAttribute('data-category');
+            
+            if (selectedCategory === 'all' || cardCategories.includes(selectedCategory)) {
+                // Show project card
+                card.classList.remove('hidden');
+            } else {
+                // Hide project card
+                card.classList.add('hidden');
+            }
+        });
+    }
+    
+    // Initialize with featured projects visible
+    filterProjects('featured');
+});

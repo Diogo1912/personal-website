@@ -263,8 +263,18 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="section-title">Portfolio</h2>
+            
+            <!-- Category Filter Chips -->
+            <div class="category-filters">
+                <button class="category-chip" data-category="all">All</button>
+                <button class="category-chip active" data-category="featured">Featured</button>
+                <button class="category-chip" data-category="machine-learning">Machine Learning</button>
+                <button class="category-chip" data-category="web-development">Web development</button>
+                <button class="category-chip" data-category="data-visualisation">Data visualisation</button>
+            </div>
+            
             <div class="portfolio-grid">
-                <div class="project-card">
+                <div class="project-card" data-category="web-development">
                     <div class="project-image">
                         <img src="images/geldmaat.png" alt="Geldmaat ATM Accessibility Simulator" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
@@ -286,7 +296,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" data-category="data-visualisation web-development">
                     <div class="project-image">
                         <img src="images/carbon.png" alt="Carbon Countdown" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
@@ -308,7 +318,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" data-category="machine-learning web-development">
                     <div class="project-image">
                         <img src="images/whoppah.png" alt="Whoppah AI Generator" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
@@ -330,7 +340,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" data-category="data-visualisation machine-learning featured">
                     <div class="project-image">
                         <img src="images/island.png" alt="ISLANDtm Economic Simulation" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
@@ -352,7 +362,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" data-category="web-development machine-learning featured">
                     <div class="project-image">
                         <img src="images/ai-qa.png" alt="QA Agent" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
@@ -374,7 +384,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" data-category="web-development">
                     <div class="project-image">
                         <img src="images/reddit-api.png" alt="Reddit to Slack Integration" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
@@ -389,6 +399,32 @@
                         </div>
                         <div style="display: flex; gap: 1rem; margin-top: 15px;">
                             <a href="https://github.com/Diogo1912/reddit-to-slack" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background-color: #000000; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-size: 14px; font-weight: 500; font-family: Inter, sans-serif; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#333333'; this.style.transform='translateY(-2px)';" onmouseout="this.style.backgroundColor='#000000'; this.style.transform='translateY(0px)';">
+                                <i class="fab fa-github" style="font-size: 16px;"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="data-visualisation web-development featured">
+                    <div class="project-image">
+                        <img src="images/circuitboard.png" alt="Circuitboard System Visualizer" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-content">
+                        <h3>Circuitboard System Visualizer</h3>
+                        <p>An interactive web application for visualizing systems using nodes and links. Features include drag-and-drop node creation, customizable connections, sticky notes, zoom/pan navigation, and export to PNG with shareable scene codes.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; padding: 5px;">
+                            <span style="display: inline-block; background-color: #3178c6; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">TypeScript</span>
+                            <span style="display: inline-block; background-color: #61dafb; color: #000000; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">React</span>
+                            <span style="display: inline-block; background-color: #646cff; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">Vite</span>
+                            <span style="display: inline-block; background-color: #1572b6; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; font-family: Inter, sans-serif;">CSS3</span>
+                        </div>
+                        <div style="display: flex; gap: 1rem; margin-top: 15px;">
+                            <a href="https://diogo1912.github.io/circuitboard/" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background-color: #007bff; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-size: 14px; font-weight: 500; font-family: Inter, sans-serif; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='translateY(-2px)';" onmouseout="this.style.backgroundColor='#007bff'; this.style.transform='translateY(0px)';">
+                                <i class="fas fa-external-link-alt" style="font-size: 16px;"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/Diogo1912/circuitboard" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background-color: #000000; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-size: 14px; font-weight: 500; font-family: Inter, sans-serif; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#333333'; this.style.transform='translateY(-2px)';" onmouseout="this.style.backgroundColor='#000000'; this.style.transform='translateY(0px)';">
                                 <i class="fab fa-github" style="font-size: 16px;"></i>
                                 View Code
                             </a>
